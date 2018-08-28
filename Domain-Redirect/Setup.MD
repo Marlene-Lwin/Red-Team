@@ -1,7 +1,7 @@
 # Trusted Domain Redirect with Powershell Empire
 
 ```
-# Team Server
+# To Set Up Powershell Empire Team Server
 Enter “listeners”
 Enter “uselistener http”
 set Name httpScriptkiddie
