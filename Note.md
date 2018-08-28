@@ -1,5 +1,5 @@
 
-# Change Default File Association
+# Lateral Movement in Windows environment using MMC
 
 MITRE ATT&CK Technique: [T1042](https://attack.mitre.org/wiki/Technique/T1042)
 
