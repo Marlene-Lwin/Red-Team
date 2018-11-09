@@ -1,6 +1,10 @@
 ### Socat
 
 ```
+Redirector IP: 35.153.183.204
+C2 IP: 54.166.109.171
+Socat TCP4-LISTEN:8080,fork TCP4:54.166.109.171:8080
+
  socat tcp-listen:80,fork,reuseaddr,forever tcp-connect:13.251.60.115:80
  socat tcp-listen:5353,fork,reuseaddr,forever udp-connect:localhost:53
 ```
