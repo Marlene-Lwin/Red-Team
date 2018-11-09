@@ -36,7 +36,8 @@ sudo ufw allow 8080
 ```
 
 ### Dumb pipe redirection
-Socat TCP4-LISTEN:8080,fork TCP4:54.166.109.171:8080```
+```
+Socat TCP4-LISTEN:8080,fork TCP4:54.166.109.171:8080
 
 iptables -I INPUT -p tcp -m tcp --dport 8080 -j ACCEPT
 iptables -t nat -A PREROUTING -p tcp --dport 8080 -j DNAT --to-destination 54.166.109.171:8080
