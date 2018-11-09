@@ -29,4 +29,8 @@ sudo ufw allow 55553
 sudo ufw allow from 35.153.183.204 to any port 8080 proto tcp
 sudo ufw allow out to 35.153.183.204 port 8080 proto tcp
 sudo ufw deny out to any
+
+###On The Redirector
+sudo ufw allow 22
+sudo ufw allow 8080
 ```
