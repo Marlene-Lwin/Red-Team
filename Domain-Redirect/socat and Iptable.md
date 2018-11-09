@@ -34,3 +34,15 @@ sudo ufw deny out to any
 sudo ufw allow 22
 sudo ufw allow 8080
 ```
+
+### Dumb pipe redirection
+Socat TCP4-LISTEN:8080,fork TCP4:54.166.109.171:8080```
+
+iptables -I INPUT -p tcp -m tcp --dport 8080 -j ACCEPT
+iptables -t nat -A PREROUTING -p tcp --dport 8080 -j DNAT --to-destination 54.166.109.171:8080
+iptables -t nat -A POSTROUTING -j MASQUERADE
+iptables -I FORWARD -j ACCEPT
+iptables -P FORWARD ACCEPT
+sysctl net.ipv4.ip_forward=1
+
+```
